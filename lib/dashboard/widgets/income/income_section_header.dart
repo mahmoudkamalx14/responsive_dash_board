@@ -1,43 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/core/theme/app_styles.dart';
+import 'package:responsive_dash_board/dashboard/widgets/all_expenses/range_options.dart';
 
-class QuickInvoiceHeader extends StatelessWidget {
-  const QuickInvoiceHeader({super.key});
+class IncomeSectionHeader extends StatelessWidget {
+  const IncomeSectionHeader({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Flexible(
-          fit: FlexFit.loose,
-          child: FittedBox(
-            fit: BoxFit.scaleDown,
-            child: Text(
-              'Quick Invoice',
-              style: AppStyles.styleSemiBold20,
-            ),
-          ),
-        ),
-        const SizedBox(width: 12),
         Flexible(
           fit: FlexFit.loose,
           child: FittedBox(
             fit: BoxFit.scaleDown,
-            child: Container(
-              width: 48,
-              height: 48,
-              decoration: const ShapeDecoration(
-                color: Color(0xFFFAFAFA),
-                shape: OvalBorder(),
-              ),
-              child: const Icon(
-                Icons.add,
-                color: Color(0xff4EB7F2),
-              ),
+            child: Text(
+              'Income',
+              style: AppStyles.styleSemiBold20,
             ),
           ),
-        )
+        ),
+        SizedBox(width: 12),
+        Flexible(
+          fit: FlexFit.loose,
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: RangeOptions(),
+          ),
+        ),
       ],
     );
   }

@@ -29,9 +29,7 @@ class _AllExpensessItemsListViewState extends State<AllExpensessItemsListView> {
             ),
           ),
         ),
-        const SizedBox(
-          width: 8,
-        ),
+        const SizedBox(width: 8),
         Expanded(
           child: GestureDetector(
             onTap: () {
@@ -43,9 +41,7 @@ class _AllExpensessItemsListViewState extends State<AllExpensessItemsListView> {
             ),
           ),
         ),
-        const SizedBox(
-          width: 8,
-        ),
+        const SizedBox(width: 8),
         Expanded(
           child: GestureDetector(
             onTap: () {

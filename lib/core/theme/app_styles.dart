@@ -14,7 +14,7 @@ abstract class AppStyles {
     color: ColorsManager.darkBlue,
     fontSize: 16,
     fontFamily: 'Montserrat',
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w500,
     height: 0,
   );
 
@@ -51,10 +51,10 @@ abstract class AppStyles {
   );
 
   static const TextStyle styleRegular14 = TextStyle(
-    color: ColorsManager.lightBlue,
-    fontSize: 24,
+    color: ColorsManager.darkGray,
+    fontSize: 14,
     fontFamily: 'Montserrat',
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w400,
     height: 0,
   );
 
@@ -70,7 +70,7 @@ abstract class AppStyles {
     color: ColorsManager.darkBlue,
     fontSize: 16,
     fontFamily: 'Montserrat',
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w700,
     height: 0,
   );
 

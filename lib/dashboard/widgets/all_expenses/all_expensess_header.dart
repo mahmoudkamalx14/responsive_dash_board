@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_dash_board/core/theme/app_styles.dart';
@@ -9,15 +10,26 @@ class AllExpensessHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          'All Expenses',
-          style: AppStyles.styleSemiBold20,
+        Flexible(
+          fit: FlexFit.loose,
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              'All Expenses',
+              style: AppStyles.styleSemiBold20,
+            ),
+          ),
         ),
-        Expanded(
-          child: SizedBox(),
+        SizedBox(width: 12),
+        Flexible(
+          fit: FlexFit.loose,
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: RangeOptions(),
+          ),
         ),
-        RangeOptions(),
       ],
     );
   }

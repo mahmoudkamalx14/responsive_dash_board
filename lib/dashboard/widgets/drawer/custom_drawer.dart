@@ -11,43 +11,44 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: UserInfoListTile(
-            userInfoModel: UserInfoModel(
-              image: Assets.assetsImagesAvatar3,
-              title: 'Lekan Okeowo',
-              subTitle: 'demo@gmail.com',
+    return Container(
+      width: MediaQuery.sizeOf(context).width * 0.7,
+      color: Colors.white,
+      child: const CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: UserInfoListTile(
+              userInfoModel: UserInfoModel(
+                image: Assets.assetsImagesAvatar3,
+                title: 'Lekan Okeowo',
+                subTitle: 'demo@gmail.com',
+              ),
             ),
           ),
-        ),
-        SliverToBoxAdapter(
-          child: SizedBox(
-            height: 8,
-          ),
-        ),
-        DrawerItemsListView(),
-        SliverFillRemaining(
-          hasScrollBody: false,
-          child: Column(
-            children: [
-              Expanded(child: SizedBox(height: 20)),
-              InActiveDrawerItem(
-                drawerItemModel: DrawerItemModel(
-                  title: 'Setting system',
-                  image: Assets.assetsImagesSettings,
+          SliverToBoxAdapter(child: SizedBox(height: 8)),
+          DrawerItemsListView(),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    title: 'Setting system',
+                    image: Assets.assetsImagesSettings,
+                  ),
                 ),
-              ),
-              InActiveDrawerItem(
-                drawerItemModel: DrawerItemModel(
-                    title: 'Logout account', image: Assets.assetsImagesLogout),
-              ),
-              SizedBox(height: 48),
-            ],
-          ),
-        )
-      ],
+                InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                      title: 'Logout account',
+                      image: Assets.assetsImagesLogout),
+                ),
+                SizedBox(height: 48),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }

@@ -28,12 +28,9 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
               });
             }
           },
-          child: Padding(
-            padding: const EdgeInsets.only(top: 20),
-            child: DrawerItem(
-              drawerItemModel: items[index],
-              isActive: activeIndex == index,
-            ),
+          child: DrawerItem(
+            drawerItemModel: items[index],
+            isActive: activeIndex == index,
           ),
         );
       },

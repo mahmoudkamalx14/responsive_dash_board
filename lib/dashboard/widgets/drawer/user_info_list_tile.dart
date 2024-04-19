@@ -17,26 +17,24 @@ class UserInfoListTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       elevation: 0,
-      child: Expanded(
-        child: ListTile(
-          leading: SvgPicture.asset(
-            userInfoModel.image,
+      child: ListTile(
+        leading: SvgPicture.asset(
+          userInfoModel.image,
+        ),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: AlignmentDirectional.centerStart,
+          child: Text(
+            userInfoModel.title,
+            style: AppStyles.styleSemiBold16,
           ),
-          title: FittedBox(
-            fit: BoxFit.scaleDown,
-            alignment: AlignmentDirectional.centerStart,
-            child: Text(
-              userInfoModel.title,
-              style: AppStyles.styleSemiBold16,
-            ),
-          ),
-          subtitle: FittedBox(
-            fit: BoxFit.scaleDown,
-            alignment: AlignmentDirectional.centerStart,
-            child: Text(
-              userInfoModel.subTitle,
-              style: AppStyles.styleRegular12,
-            ),
+        ),
+        subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: AlignmentDirectional.centerStart,
+          child: Text(
+            userInfoModel.subTitle,
+            style: AppStyles.styleRegular12,
           ),
         ),
       ),
